@@ -2,8 +2,8 @@ from pydantic_settings import BaseSettings
 from typing import List, Union
 
 class Settings(BaseSettings):
-    # A comma-separated string of Gemini API Keys will be automatically converted to a list of strings
-    GEMINI_API_KEYS: List[str] = []
+    # A comma-separated string of Gemini API Keys
+    GEMINI_API_KEYS: str = ""
 
     # Gemini API Base URL
     GEMINI_BASE_URL: str = "https://generativelanguage.googleapis.com/v1beta"

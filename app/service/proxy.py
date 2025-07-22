@@ -65,7 +65,8 @@ class KeyManager:
         return None
 
 # Initialize the key manager as a singleton
-key_manager = KeyManager(settings.GEMINI_API_KEYS)
+keys_list = [key.strip() for key in settings.GEMINI_API_KEYS.split(',') if key.strip()]
+key_manager = KeyManager(keys_list)
 
 def _update_usage_and_balance(db: Session, api_key: UserApiKey, cost: int = 1):
     """Increments usage count and decrements balance for a given API key."""
