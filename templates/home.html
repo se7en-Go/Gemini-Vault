@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome - Gemini-Vault{% endblock %}
+
+{% block nav_links %}
+<a href="/login" class="text-gray-600 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+<a href="/register" class="text-white bg-blue-600 hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Register</a>
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="text-4xl font-bold text-gray-900">Welcome to Gemini-Vault</h1>
+    <p class="mt-4 text-lg text-gray-600">Your high-performance gateway to the Gemini API.</p>
+    <div class="mt-8">
+        <a href="/register" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700">
+            Get Started
+        </a>
+    </div>
+</div>
+{% endblock %}
